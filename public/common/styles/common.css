@@ -698,7 +698,7 @@ footer {
      padding: 40px 0;
 }
 
-/* 메인 */
+/* 메인 화면 만들기 */
 .maintit{
      margin-bottom: 20px;
      font-size: 38px;
@@ -710,5 +710,121 @@ footer {
      display: block;
      margin-top: 10px;
      font-size: 18px;
+     color: #ababab; 
+}
+
+/* 메인 < 도서 탭 */
+
+.tapcontent{
+     max-width: 1200px;
+     margin: 0 auto;     
+}
+
+.tap{
+     margin:40px 100px;
+     display: flex;
+     text-align: center;
+     justify-content: space-evenly;     
+}
+.btn-tap{
+     display: inline-block;
+     height: 40px;
+     line-height: 40px;
+     font-size: 18px;
+     color: #888;
+     font-weight: 700;
+     position: relative;
+}
+.btn-tap::after{
+     content: "";
+     display: block;
+     width: 0;
+     height: 2px;
+     background: #222;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+}
+.btn-tap.active{
+     color: #222;
+}
+.btn-tap.active::after{
+     width: 100%;
+}
+
+/* 메인 < 도서탭 < 캐러셀*/
+
+.mainslider{
+     margin:0 100px;
+     position: relative;
+}
+
+.slick-arrow{
+     width: 42px;
+     height: 42px;
+     background: url("/images/arrow-icon.png") no-repeat 0 0/100%;
+     font-size: 0;
+     position: absolute;
+     top: 50%;
+     margin-top: -55px;
+     z-index: 9;
+}
+
+.slick-arrow.slick-prev{
+     left: 10;
+}
+.slick-arrow.slick-next{
+     right: 10;
+     transform: rotate(180deg);
+}
+.rolligm{
+     padding: 0 10px;     
+}
+.imgbox > img{
+     max-width: 100%;
+}
+.rolligm > strong{
+     display: block;
+     font-size: 15px;
+     color: #666;
+}
+.textbox{
+     font-size: 13px;
      color: #ababab;
 }
+
+@media screen and (max-width: 767px){
+     .topcontent{
+          padding: 0 10px;
+     }
+     .maintit{
+          font-size: 26px;
+     }
+     .maintit > span {
+          font-size: 14px;
+          margin-top: 0px;
+     }
+     .tap{ margin: 20px 0;}
+     .btn-tap{
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+     }
+     .mainslider{
+          margin: 0;
+     }
+}
+
+/*메인 < 도서 검색 */
+
+.searchbook{
+     padding: 40px 0;
+     margin: 60px 0 40px;
+     background: #454545;
+}
+
+.searchbook .maintit {
+     color: #fff;
+}
+
+
